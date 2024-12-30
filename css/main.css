@@ -1,0 +1,77 @@
+@import url('./pico/pico.colors.min.css');
+
+:root {
+    --blue: #039;
+    --blue-dark: hsl(from var(--blue) h s calc(l - 5));
+    --blue-darker: hsl(from var(--blue) h s calc(l - 15));
+    --blue-light: hsl(from var(--blue) h s calc(l + 5));
+    --blue-lighter: hsl(from var(--blue) h s calc(l + 15));
+
+
+    --yellow: #fc0;
+    --yellow-dark: hsl(from var(--yellow) h s calc(l - 5));
+    --yellow-darker: hsl(from var(--yellow) h s calc(l - 15));
+    --yellow-light: hsl(from var(--yellow) h s calc(l + 5));
+    --yellow-lighter: hsl(from var(--yellow) h s calc(l + 15));
+}
+
+nav {
+    padding-left: 1rem;
+    padding-right: 3rem;
+    padding:  0.5rem 3rem 0rem 1rem;
+}
+
+
+@media (max-width: 768px) {
+    /* Small devices*/
+    #desktop-nav {
+        display: none;
+    }
+
+    #mobile-nav-links {
+        max-height: 0px;
+        transition: max-height 0.5s ease-in-out;
+    }
+
+    #mobile-nav-links.show {
+        max-height: 500px;
+    }
+
+    .mobile-link {
+        display: none;
+    }
+    .mobile-link.show {
+        display: block;
+    }
+
+    #hamburger-button {
+        display: inline;
+        position: absolute;
+        right: 1rem;
+    }
+
+    aside li {
+        display: inline;
+    }
+}
+
+@media (min-width: 768px) {
+    /* Large devices*/
+    #mobile-nav {
+        display: none;
+    }
+
+    #dekstop-nav nav {
+        float: right;
+    }
+}
+
+nav {
+    background-image: linear-gradient(to bottom right, var(--yellow-lighter), var(--yellow-darker));
+
+}
+
+main {
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom right, var(--blue-lighter), var(--blue-darker));
+}
