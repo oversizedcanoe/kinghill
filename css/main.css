@@ -20,7 +20,6 @@
 
 html {
     min-height: 100vh;
-    height: 200vh;
     /* background-image: linear-gradient(to bottom right, var(--blue-lighter), var(--blue-darker)); */
 }
 
